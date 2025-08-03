@@ -64,7 +64,7 @@ jobs:
       uses: docker/build-push-action@v6
       with:
         context: .
-        file: ./Dockerfile
+        file: ./Docker.yaml
         push: true
         tags: 10rajkumar10/my-app:${{ github.run_id }}
 
