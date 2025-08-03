@@ -1,16 +1,16 @@
-# Service for the application
 apiVersion: v1
 kind: Service
 metadata:
   name: go-web-app
   labels:
     app: go-web-app
+  annotations:
+    service.beta.kubernetes.io/aws-load-balancer-security-groups: "allow-http"
 spec:
+  type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 8080
-    protocol: TCP
+    - port: 80
+      targetPort: 8080
+      protocol: TCP
   selector:
     app: go-web-app
-
-  type: LoadBalancer
