@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: go-web-app
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /courses
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   ingressClassName: nginx
   rules:
@@ -17,3 +17,4 @@ spec:
               name: go-web-app
               port:
                 number: 80
+
