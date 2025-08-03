@@ -86,8 +86,8 @@ jobs:
         
     - name: Update image in Helm chart
       run: |
-        sed -i 's|^\([[:space:]]*image:\).*|\1 10rajkumar10/my-app:${{ github.run_id }}|' helm/go-web-app-chart/values.yaml
-        
+        sed -i 's|image: 10rajkumar10/my-app:[^[:space:]]*|image: 10rajkumar10/my-app:${{ github.run_id }}|' helm/go-web-app-chart/values.yaml
+
     - name: Commit and push changes
       run: |
         git config --global user.email "rajkumar@gmail.com"
