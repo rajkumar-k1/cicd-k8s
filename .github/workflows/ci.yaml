@@ -83,13 +83,10 @@ jobs:
       run: |
         sed -i 's|^\([[:space:]]*image:\).*|\1 10rajkumar10/my-app:${{ github.run_id }}|' helm/go-web-app-chart/values.yaml
 
-
-
     - name: Commit and push changes
       run: |
-        git config --global user.email "abhishek@gmail.com"
-        git config --global user.name "Abhishek Veeramalla"
+        git config --global user.email "rajkumar@gmail.com"
+        git config --global user.name "rajkumar-k1"
         git add helm/go-web-app-chart/values.yaml
         git commit -m "Update image tag in Helm chart"
         git push
-
