@@ -1,3 +1,3 @@
 Deployment:
-  image: 10rajkumar10/my-app:16707908813
+  image: 10rajkumar10/my-app:16708118904
   replicas: 3
