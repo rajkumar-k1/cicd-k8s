@@ -4,8 +4,6 @@ metadata:
   name: go-web-app
   labels:
     app: go-web-app
-  annotations:
-    service.beta.kubernetes.io/aws-load-balancer-security-groups: "allow-http"
 spec:
   type: LoadBalancer
   ports:
@@ -14,3 +12,4 @@ spec:
       protocol: TCP
   selector:
     app: go-web-app
+
